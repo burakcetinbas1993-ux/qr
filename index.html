@@ -39,15 +39,14 @@ body {
     box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 
-.lock {
-    font-size: 50px;
+.loginLogo {
+    width: 180px;
+    max-width: 70%;
     margin-bottom: 20px;
 }
 
-.logo {
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: 4px;
+.lock {
+    font-size: 45px;
     margin-bottom: 15px;
 }
 
@@ -79,10 +78,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    transform: scale(1.02);
-}
-
 #error {
     display: none;
     color: #ff5555;
@@ -95,36 +90,54 @@ button:hover {
 #mainScreen {
     display: none;
     min-height: 100vh;
-    padding: 50px 20px;
-    text-align: center;
-    animation: fadeIn 1.2s ease;
+    animation: fadeIn 1s ease;
 }
 
 @keyframes fadeIn {
-
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(15px);
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
-.mainLogo {
-    font-size: clamp(40px, 10vw, 80px);
-    font-weight: 900;
-    letter-spacing: 5px;
-    margin-top: 30px;
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* İÇERİK */
+
+.content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 180px;
+    max-width: 60%;
+    margin-bottom: 20px;
 }
 
 .slogan {
     color: #aaa;
     font-size: 18px;
-    margin-top: 10px;
     margin-bottom: 50px;
 }
 
@@ -132,8 +145,6 @@ button:hover {
 /* FOTOĞRAFLAR */
 
 .photos {
-    max-width: 900px;
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -148,21 +159,13 @@ button:hover {
     align-items: center;
     color: #666;
     font-size: 18px;
-    overflow: hidden;
-}
-
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 
-/* ALT YAZI */
+/* ALT MESAJ */
 
 .message {
-    max-width: 700px;
-    margin: 60px auto 20px;
+    margin-top: 60px;
     padding: 30px;
     background: #151515;
     border-radius: 20px;
@@ -190,6 +193,10 @@ button:hover {
         height: 350px;
     }
 
+    .content {
+        padding-top: 35px;
+    }
+
 }
 
 </style>
@@ -206,9 +213,11 @@ button:hover {
 
         <div class="lock">🔐</div>
 
-        <div class="logo">
-            VİZYONSUZLAR
-        </div>
+        <img 
+            src="logo%20viz.jfif" 
+            class="loginLogo"
+            alt="Vizyonsuzlar"
+        >
 
         <div class="subtitle">
             Bu sayfaya herkes giremez...
@@ -239,42 +248,62 @@ button:hover {
 
 <div id="mainScreen">
 
-    <div class="mainLogo">
-        VİZYONSUZLAR
+    <!-- BANNER -->
+
+    <div class="banner">
+
+        <img 
+            src="barner%20viz.jfif"
+            alt="Vizyonsuzlar Banner"
+        >
+
     </div>
 
-    <div class="slogan">
-        Plan yok. Vizyon yok. Ama anı çok. 😎
-    </div>
 
+    <div class="content">
 
-    <!-- FOTOĞRAF ALANLARI -->
+        <!-- LOGO -->
 
-    <div class="photos">
+        <img 
+            src="logo%20viz.jfif"
+            class="logo"
+            alt="Vizyonsuzlar"
+        >
 
-        <div class="photo">
-            📸 FOTOĞRAF 1
+        <div class="slogan">
+            Plan yok. Vizyon yok. Ama anı çok. 😎
         </div>
 
-        <div class="photo">
-            📸 FOTOĞRAF 2
+
+        <!-- FOTOĞRAF ALANLARI -->
+
+        <div class="photos">
+
+            <div class="photo">
+                📸 FOTOĞRAF 1
+            </div>
+
+            <div class="photo">
+                📸 FOTOĞRAF 2
+            </div>
+
         </div>
 
-    </div>
 
+        <!-- MESAJ -->
 
-    <!-- MESAJ -->
+        <div class="message">
 
-    <div class="message">
+            <h2>Vizyonsuzlar Hakkında 😂</h2>
 
-        <h2>Vizyonsuzlar Hakkında 😂</h2>
+            <p>
+                Gelecek planlarımız yok.
+                Geçmişten ders almıyoruz.
+                Anlık kararlarla hareket ediyoruz.
+                Ama nedense hâlâ birlikteyiz.
+            </p>
 
-        <p>
-            Gelecek planlarımız yok.
-            Geçmişten ders almıyoruz.
-            Anlık kararlarla hareket ediyoruz.
-            Ama nedense hâlâ birlikteyiz.
-        </p>
+        </div>
 
     </div>
 
