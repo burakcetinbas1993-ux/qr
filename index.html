@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vizyonsuzlar</title>
+
+<title>Vizyonsuzlar 😂</title>
 
 <style>
 * {
@@ -36,7 +35,6 @@ body {
     padding: 40px 30px;
     background: #151515;
     border-radius: 25px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
 }
 
 .loginLogo {
@@ -62,7 +60,6 @@ input {
     border-radius: 12px;
     font-size: 17px;
     text-align: center;
-    outline: none;
     margin-bottom: 12px;
 }
 
@@ -84,26 +81,13 @@ button {
     margin-top: 15px;
 }
 
+
 /* ANA SAYFA */
 
 #mainScreen {
     display: none;
     min-height: 100vh;
-    animation: fadeIn 1s ease;
 }
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* BANNER */
 
 .banner {
     width: 100%;
@@ -112,16 +96,13 @@ button {
 
 .banner img {
     width: 100%;
-    height: auto;
     display: block;
 }
-
-/* İÇERİK */
 
 .content {
     max-width: 1000px;
     margin: auto;
-    padding: 40px 20px 70px;
+    padding: 35px 20px 70px;
     text-align: center;
 }
 
@@ -137,26 +118,22 @@ button {
     margin-bottom: 30px;
 }
 
+
 /* MÜZİK */
 
 .musicBox {
     max-width: 450px;
-    margin: 0 auto 45px;
+    margin: 0 auto 40px;
     padding: 20px;
     background: #151515;
     border-radius: 20px;
 }
 
 .musicTitle {
-    font-size: 16px;
     margin-bottom: 12px;
     color: #ddd;
 }
 
-.musicButton {
-    background: white;
-    color: black;
-}
 
 /* FOTOĞRAFLAR */
 
@@ -167,22 +144,19 @@ button {
 }
 
 .photo {
-    min-height: 400px;
     border-radius: 20px;
-    background: #171717;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #777;
-    font-size: 18px;
     overflow: hidden;
+    background: #171717;
 }
 
 .photo img {
     width: 100%;
     height: 100%;
+    min-height: 450px;
     object-fit: cover;
+    display: block;
 }
+
 
 /* MESAJ */
 
@@ -202,6 +176,7 @@ button {
     line-height: 1.7;
 }
 
+
 /* TELEFON */
 
 @media (max-width: 700px) {
@@ -210,157 +185,158 @@ button {
         grid-template-columns: 1fr;
     }
 
-    .photo {
-        min-height: 350px;
+    .photo img {
+        min-height: 400px;
     }
 
     .content {
-        padding-top: 30px;
-    }
-
-    .slogan {
-        font-size: 16px;
+        padding: 30px 15px 60px;
     }
 }
-</style>
 
+</style>
 </head>
 
 <body>
+
 
 <!-- ŞİFRE EKRANI -->
 
 <div id="loginScreen">
 
-```
-<div class="loginBox">
+    <div class="loginBox">
 
-    <div class="lock">🔐</div>
+        <div class="lock">🔐</div>
 
-    <img
-        src="logo%20viz.jfif"
-        class="loginLogo"
-        alt="Vizyonsuzlar"
-    >
+        <img 
+            src="logo%20viz.jfif"
+            class="loginLogo"
+            alt="Vizyonsuzlar"
+        >
 
-    <div class="subtitle">
-        Burada önemli hiçbir şey yok...
-    </div>
+        <div class="subtitle">
+            Burada önemli hiçbir şey yok... 😂
+        </div>
 
-    <input
-        type="password"
-        id="password"
-        placeholder="Şifreyi gir"
-        onkeypress="enterKey(event)"
-    >
+        <input
+            type="password"
+            id="password"
+            placeholder="Şifreyi gir"
+            onkeypress="enterKey(event)"
+        >
 
-    <button onclick="checkPassword()">
-        GİRİŞ
-    </button>
+        <button onclick="checkPassword()">
+            GİRİŞ
+        </button>
 
-    <div id="error">
-        Yanlış şifre 😏
+        <div id="error">
+            Yanlış şifre 😏
+        </div>
+
     </div>
 
 </div>
-```
 
-</div>
 
 <!-- ANA SAYFA -->
 
 <div id="mainScreen">
 
-```
-<!-- BANNER -->
+    <!-- BANNER -->
 
-<div class="banner">
+    <div class="banner">
 
-    <img
-        src="barner%20viz.jfif"
-        alt="Vizyonsuzlar Banner"
-    >
-
-</div>
-
-
-<div class="content">
-
-    <!-- LOGO -->
-
-    <img
-        src="logo%20viz.jfif"
-        class="logo"
-        alt="Vizyonsuzlar"
-    >
-
-    <div class="slogan">
-        Plan yok. Vizyon yok. Ama anı çok. 😂
-    </div>
-
-
-    <!-- MÜZİK -->
-
-    <div class="musicBox">
-
-        <div class="musicTitle">
-            🎵 Vizyonsuzlar'ın Resmi Müziği
-        </div>
-
-        <button
-            class="musicButton"
-            onclick="toggleMusic()"
-            id="musicButton"
+        <img 
+            src="barner%20viz.jfif"
+            alt="Vizyonsuzlar Banner"
         >
-            ▶️ MÜZİĞİ BAŞLAT
-        </button>
 
-        <audio id="music" loop>
+    </div>
 
-            <source
-                src="vizyonsuzlar.mp3.mp3"
-                type="audio/mpeg"
+
+    <div class="content">
+
+        <!-- LOGO -->
+
+        <img 
+            src="logo%20viz.jfif"
+            class="logo"
+            alt="Vizyonsuzlar"
+        >
+
+        <div class="slogan">
+            Plan yok. Vizyon yok. Ama anı çok. 😂
+        </div>
+
+
+        <!-- MÜZİK -->
+
+        <div class="musicBox">
+
+            <div class="musicTitle">
+                🎵 Vizyonsuzlar'ın Resmi Müziği
+            </div>
+
+            <button 
+                onclick="toggleMusic()"
+                id="musicButton"
             >
+                ▶️ MÜZİĞİ BAŞLAT
+            </button>
 
-        </audio>
+            <audio id="music" loop>
 
-    </div>
+                <source 
+                    src="vizyonsuzlar.mp3.mp3"
+                    type="audio/mpeg"
+                >
 
+            </audio>
 
-    <!-- FOTOĞRAFLAR -->
-
-    <div class="photos">
-
-        <div class="photo">
-            📸 FOTOĞRAF 1
         </div>
 
-        <div class="photo">
-            📸 FOTOĞRAF 2
+
+        <!-- FOTOĞRAFLAR -->
+
+        <div class="photos">
+
+            <div class="photo">
+                <img 
+                    src="Gemini_Generated_Image_aq6hgaaq6hgaaq6h.jfif"
+                    alt="Vizyonsuzlar Anısı 1"
+                >
+            </div>
+
+            <div class="photo">
+                <img 
+                    src="Gemini_Generated_Image_jq0l9gjq0l9gjq0l.jfif"
+                    alt="Vizyonsuzlar Anısı 2"
+                >
+            </div>
+
         </div>
 
-    </div>
 
+        <!-- MESAJ -->
 
-    <!-- MESAJ -->
+        <div class="message">
 
-    <div class="message">
+            <h2>Vizyonsuzlar Hakkında 😂</h2>
 
-        <h2>Vizyonsuzlar Hakkında 😂</h2>
+            <p>
+                Gelecek planlarımız yok.<br>
+                Geçmişten ders almıyoruz.<br>
+                Anlık kararlarla hareket ediyoruz.<br><br>
 
-        <p>
-            Gelecek planlarımız yok.
-            Geçmişten ders almıyoruz.
-            Anlık kararlarla hareket ediyoruz.
-            Ama nedense hâlâ birlikteyiz.
-        </p>
+                Ama nedense hâlâ birlikteyiz. 😂
+            </p>
+
+        </div>
 
     </div>
 
 </div>
-```
 
-</div>
 
 <script>
 
