@@ -4,9 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vizyonsuzlar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        .login-box {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding: 40px 25px;
+            background: #1b1b1b;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .lock {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            text-align: center;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #111;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #error {
+            color: #ff5555;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Vizyonsuzlar</h1>
-    <p>Çok yakında burada güzel bir şey olacak ❤️</p>
+
+    <div class="login-box">
+
+        <div class="lock">🔐</div>
+
+        <div class="logo">
+            VİZYONSUZLAR
+        </div>
+
+        <div class="subtitle">
+            Bu sayfaya herkes giremez...
+        </div>
+
+        <input 
+            type="password" 
+            id="password" 
+            placeholder="Şifreyi gir"
+        >
+
+        <button onclick="checkPassword()">
+            GİRİŞ
+        </button>
+
+        <div id="error">
+            Yanlış şifre 😏
+        </div>
+
+    </div>
+
+    <script>
+        function checkPassword() {
+
+            const password = document.getElementById("password").value;
+
+            if (password === "1234") {
+
+                alert("Hoş geldin Vizyonsuz 😎");
+
+                // Daha sonra burayı ana sayfaya bağlayacağız.
+
+            } else {
+
+                document.getElementById("error").style.display = "block";
+
+            }
+        }
+    </script>
+
 </body>
 </html>
